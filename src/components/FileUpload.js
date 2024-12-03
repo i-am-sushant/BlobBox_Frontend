@@ -17,7 +17,7 @@ const FileUpload = () => {
 
     try {
       const response = await axios.post(
-        `http://my-backend-api-cfd8gbgjd6bafebk.switzerlandnorth-01.azurewebsites.net/upload/${folder}`,
+        `https://my-backend-api-cfd8gbgjd6bafebk.switzerlandnorth-01.azurewebsites.net/upload/${folder}`,
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
