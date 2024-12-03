@@ -10,7 +10,7 @@ const FileList = () => {
 
   const fetchFiles = async () => {
     try {
-      const response = await axios.get("http://my-backend-api-cfd8gbgjd6bafebk.switzerlandnorth-01.azurewebsites.net/files");
+      const response = await axios.get("https://my-backend-api-cfd8gbgjd6bafebk.switzerlandnorth-01.azurewebsites.net/files");
       setFiles(response.data.files);
     } catch (error) {
       console.error("Error fetching files:", error);
@@ -24,7 +24,7 @@ const FileList = () => {
         {files.map((file) => (
           <li key={file.id}>
             <strong>{file.name}</strong> - {file.size} bytes
-            <a href={`http://my-backend-api-cfd8gbgjd6bafebk.switzerlandnorth-01.azurewebsites.net/download/${file.folder}/${file.name}`}>
+            <a href={`https://my-backend-api-cfd8gbgjd6bafebk.switzerlandnorth-01.azurewebsites.net/download/${file.folder}/${file.name}`}>
               Download
             </a>
           </li>
